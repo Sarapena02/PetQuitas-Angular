@@ -20,18 +20,18 @@
                 <td>{{mascota.edad}}</td>
                 <td>{{mascota.enfermedad}}</td>
                 <td>
-                    <a [routerLink]="['/mascota/find', mascota.id]">
-                        <button class="btn btn-primary" >
-                          VER DETALLE
-                        </button>
-                      </a>
-                    <button class="btn btn-danger" (click)="eliminarMascota(mascota)">
-                        DELETE
+                  <a [routerLink]="['/mascota/find', mascota.id]">
+                      <button class="btn btn-primary">
+                          <i class="bi bi-eye"></i>
                       </button>
-                    <button class="btn btn-primary" (click)="mostrarMascota(mascota)">
-                        SELECT
-                      </button>
-                </td>
+                  </a>
+                  <button class="btn btn-danger" (click)="eliminarMascota(mascota)">
+                      <i class="bi bi-trash"></i>
+                  </button>
+                  <button class="btn btn-primary" (click)="mostrarMascota(mascota)">
+                      <i class="bi bi-pencil"></i>
+                  </button>
+              </td>
         </ng-container>
         </tr>
         </tbody>
