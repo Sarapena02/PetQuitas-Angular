@@ -7,6 +7,8 @@ import { ClienteTableComponent } from './Cliente/cliente-table/cliente-table.com
 import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
 import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veterinario-table.component';
 import { MedicamentoComponent } from './Droga/droga/medicamento.component';
+import { TablaMascotasComponent } from './mascotas/tabla-mascotas/tabla-mascotas.component';
+import { MascotaDetalleComponent } from './mascotas/mascota-detalle/mascota-detalle.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MedicamentoComponent } from './Droga/droga/medicamento.component';
     ClienteTableComponent,
     TratamientoTableComponent,
     VeterinarioTableComponent,
-    MedicamentoComponent
+    MedicamentoComponent,
+    TablaMascotasComponent,
+    MascotaDetalleComponent
   ],
   imports: [
     BrowserModule,
