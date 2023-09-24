@@ -1,47 +1,4 @@
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.hero {
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-
-.social-icon {
-    font-size: 24px;
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.textoImagen{
-    color: white;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.social-icon:hover {
-    color: #53285a;
-}
-
 /* Estilos para el footer */
 .footer {
     background-color: #8f7193;
@@ -69,7 +26,7 @@ nav ul li a {
     margin-right: 10px;
 }
 
-.footer-logo h3 {
+.footer-logo a {
     font-size: 24px;
     color: #fff;
     margin: 0;
@@ -79,9 +36,22 @@ nav ul li a {
     margin: 5px 0;
     font-size: 16px;
 }
-
 /* Estilos para los íconos de redes sociales */
 .footer-social {
     margin-top: 20px;
+    color:black
 }
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #53285a;
+}
+
 

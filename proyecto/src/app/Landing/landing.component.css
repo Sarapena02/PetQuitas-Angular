@@ -1,4 +1,22 @@
 
+.textoImagen{
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+
 .services {
     text-align: center;
     padding: 40px 0;
@@ -7,7 +25,14 @@
     flex-wrap: wrap;
 }
 .services-title {
-    font-size: 36px;
+    font-size: 50px;
+    margin-bottom: 30px; /* Ajusta el espacio entre el título y los servicios */
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.pacientes-title {
+    font-size: 50px;
     margin-bottom: 30px; /* Ajusta el espacio entre el título y los servicios */
     color: #f5f5f5;
     text-align: center;
@@ -45,18 +70,18 @@
     color: #666;
 }
 
-.fotos{
+#fotos{
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.fotos h2{
+#fotos h2{
     text-align: center;
     color: #f5f5f5;
     font-size: 36px;
 }
 
-.fotos p{
+#fotos p{
     text-align: center;
     color: #f5f5f5;
     margin-bottom: 20px;
@@ -97,7 +122,7 @@
 .contact {
     text-align: center;
     padding: 5px 0;
-    background-color: #f5f5f5;
+    background-color: #e5dde6;
     color: #333;
 }
 
