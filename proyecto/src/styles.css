@@ -27,15 +27,6 @@ body::before {
     background-color: rgba(123, 105, 167, 0.568); 
     z-index: -1; 
 }
-/* Cambie el color del header y la fuente*/
-header {
-    background-color: #e5dde6;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
 
 nav ul {
     list-style: none;
@@ -60,7 +51,15 @@ nav ul li a {
     font-size: 36px;
     margin-bottom: 20px;
 }
-
+/* Cambie el color del header y la fuente*/
+header {
+    background-color: #e5dde6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -109,6 +108,7 @@ nav ul li a {
 .button:active{
     transform: scale(0.3);
 }
+
 /* Estilos para el dropdown */
 .dropdown {
     position: relative;
@@ -156,65 +156,3 @@ nav ul li a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.social-icon {
-    font-size: 24px;
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.textoImagen{
-    color: white;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.social-icon:hover {
-    color: #53285a;
-}
-
-/* Estilos para el footer */
-.footer {
-    background-color: #8f7193;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-}
-
-.footer-logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.footer-logo h3 {
-    font-size: 24px;
-    color: #fff;
-    margin: 0;
-}
-
-.footer-info p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-/* Estilos para los íconos de redes sociales */
-.footer-social {
-    margin-top: 20px;
-}
-
