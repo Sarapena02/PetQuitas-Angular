@@ -26,7 +26,7 @@
     margin-right: 10px;
 }
 
-.footer-logo h3 {
+.footer-logo a {
     font-size: 24px;
     color: #fff;
     margin: 0;
@@ -36,9 +36,22 @@
     margin: 5px 0;
     font-size: 16px;
 }
-
 /* Estilos para los íconos de redes sociales */
 .footer-social {
     margin-top: 20px;
+    color:black
 }
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #53285a;
+}
+
 
