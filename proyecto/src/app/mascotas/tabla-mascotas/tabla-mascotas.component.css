@@ -6,6 +6,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;/* Establece el alto mínimo del contenedor principal al 100% del alto de la ventana */
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 /* Contenedor de la tabla */
@@ -62,4 +64,10 @@
 .table tbody tr:nth-of-type(odd) {
     background-color: #e5dde6;
     transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #8f7193;
+    border: none;
+    margin: 1px;
 }

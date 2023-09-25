@@ -118,4 +118,13 @@ export class MascotaService {
     const mascota:Mascota = this.mascotasList.find(o => o.id === id)!;
     return mascota;
   }
+
+  save(mascota:Mascota){
+    this.mascotasList.push(mascota);
+  }
+
+  update(mascota:Mascota){
+    const index = this.mascotasList.findIndex(o => o.id === mascota.id);
+    this.mascotasList[index] = mascota;
+  }
 }
