@@ -51,108 +51,84 @@ nav ul li a {
     font-size: 36px;
     margin-bottom: 20px;
 }
-/* Cambie el color del header y la fuente*/
-header {
-    background-color: #e5dde6;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
-.logo {
-    display: flex;
-    align-items: center;
-    margin-right: 0; /* Empuja el logo hacia la izquierda */
-}
 
-.logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px; /* Ajusta el espacio entre la imagen y el título */
-}
-
-.logo h1 {
-    font-size: 24px; /* Ajusta el tamaño del título */
-    color: #333;
-    margin: 0; /* Elimina el margen superior e inferior del título */
-}
 /* Cambie los botones que teniamos por button y les puse otro estilo */
 .button {
-   border: 0;
-   background-image: linear-gradient(
-    150deg,
-    #8f7193,
-    #c0a0c3,
-    #9c879e);
-    border-radius: 8px;
-    color:#fff;
-    display: flex;
-    font-size: 18px;
-    padding: 4px;
-    cursor: pointer;
-    transition: .3s;
-    display:inline-flex;
-}
-.button span{
-    background-color: #8f7193;
-    padding: 16px 24px;
-    border-radius: 6px;
-    transition: .1s;
-}
+    border: 0;
+    background-image: linear-gradient(
+     150deg,
+     #8f7193,
+     #c0a0c3,
+     #9c879e);
+     border-radius: 8px;
+     color:#fff;
+     display: flex;
+     font-size: 18px;
+     padding: 4px;
+     cursor: pointer;
+     transition: .3s;
+     display:inline-flex;
+ }
+ .button span{
+     background-color: #8f7193;
+     padding: 16px 24px;
+     border-radius: 6px;
+     transition: .1s;
+ }
+ 
+ .button:hover {
+     background: none;
+     color: #53285a
+ }
+ .button:active{
+     transform: scale(0.3);
+ }
+ 
+ /* Estilos para el dropdown */
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
+ 
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     border-radius: 5px; /* Agregado para redondear los bordes del dropdown */
+ }
+ 
+ .dropdown-content a {
+     color: black;
+     padding: 10px 20px; /* Ajuste del padding para un espacio más cómodo */
+     text-decoration: none;
+     display: block;
+     transition: background-color 0.3s; /* Agregado para una transición suave */
+ }
+ 
+ .dropdown-content a:hover {
+     background-color: #e5e5e5; /* Cambio en el color de fondo al pasar el cursor */
+ }
+ 
+ /* Estilos para los botones dentro del dropdown */
+ .dropdown-content a[href^="/logInVet"],
+ .dropdown-content a[href^="/logInCliente"] {
+     background-color: #8f7193;
+     color: white;
+     transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+     padding: 10px 20px; /* Ajuste del padding para un espacio más cómodo */
+ }
+ 
+ /* Cambio de color al pasar el cursor por encima del botón */
+ .dropdown-content a[href^="/logInVet"]:hover,
+ .dropdown-content a[href^="/logInCliente"]:hover {
+     background-color: #53285a;
+     transform: scale(1.05); /* Cambio de escala al pasar el cursor */
+ }
+ 
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
 
-.button:hover {
-    background: none;
-    color: #53285a
-}
-.button:active{
-    transform: scale(0.3);
-}
-
-/* Estilos para el dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px; /* Agregado para redondear los bordes del dropdown */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px 20px; /* Ajuste del padding para un espacio más cómodo */
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s; /* Agregado para una transición suave */
-}
-
-.dropdown-content a:hover {
-    background-color: #e5e5e5; /* Cambio en el color de fondo al pasar el cursor */
-}
-
-/* Estilos para los botones dentro del dropdown */
-.dropdown-content a[href^="/logInVet"],
-.dropdown-content a[href^="/logInCliente"] {
-    background-color: #8f7193;
-    color: white;
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-    padding: 10px 20px; /* Ajuste del padding para un espacio más cómodo */
-}
-
-/* Cambio de color al pasar el cursor por encima del botón */
-.dropdown-content a[href^="/logInVet"]:hover,
-.dropdown-content a[href^="/logInCliente"]:hover {
-    background-color: #53285a;
-    transform: scale(1.05); /* Cambio de escala al pasar el cursor */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}

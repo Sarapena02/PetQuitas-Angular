@@ -9,6 +9,11 @@ import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veter
 import { MedicamentoComponent } from './Droga/droga/medicamento.component';
 import { TablaMascotasComponent } from './mascotas/tabla-mascotas/tabla-mascotas.component';
 import { MascotaDetalleComponent } from './mascotas/mascota-detalle/mascota-detalle.component';
+import { LandingComponent } from './Landing/landing/landing.component';
+import { ErrorPageComponent } from './error/error-page/error-page.component';
+import { FormMascotaComponent } from './mascotas/form-mascota/form-mascota.component';
+import { FormsModule, NgForm } from '@angular/forms';
+import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit-mascota.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,16 @@ import { MascotaDetalleComponent } from './mascotas/mascota-detalle/mascota-deta
     VeterinarioTableComponent,
     MedicamentoComponent,
     TablaMascotasComponent,
-    MascotaDetalleComponent
+    MascotaDetalleComponent,
+    LandingComponent,
+    ErrorPageComponent,
+    FormMascotaComponent,
+    FormEditMascotaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

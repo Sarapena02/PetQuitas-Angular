@@ -10,9 +10,9 @@ import { MascotaService } from 'src/app/services/mascota/mascota.service';
 export class TablaMascotasComponent {
 
   //atributos
-  selectedMascota!: Mascota;
-
   mascotasList!: Mascota[];
+
+  mascotaEditar!: Mascota;
 
   //constructor
   constructor(
@@ -20,18 +20,25 @@ export class TablaMascotasComponent {
   ){
   }
 
+  //cuando entra en el componenete carga todas las mascotas
   ngOnInit(): void {
     this.mascotasList = this.mascotaService.findAll();
   }
 
   //metodos
-  mostrarMascota(mascota: Mascota){
-    this.selectedMascota = mascota;
+  //edita una mascota
+  editarMascota(mascota: Mascota){
+    this.mascotaEditar = mascota;
   }
 
+  //busca el id de la mascota y la elimina
   eliminarMascota(mascota: Mascota){
     var index = this.mascotasList.indexOf(mascota);
     this.mascotasList.splice(index, 1);
   }
 
+  //agrega una mascota haciendo push a la lista
+  agregarMascota(mascota: Mascota){
+    this.mascotasList.push(mascota);
+  }
 }
