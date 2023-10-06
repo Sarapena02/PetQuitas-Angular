@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ClienteTableComponent } from './Cliente/cliente-table/cliente-table.component';
 import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
 import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veterinario-table.component';
-import { MedicamentoComponent } from './Droga/droga/medicamento.component';
+import { DrogaComponent } from './Droga/droga/droga.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { MedicamentoComponent } from './Droga/droga/medicamento.component';
     ClienteTableComponent,
     TratamientoTableComponent,
     VeterinarioTableComponent,
-    MedicamentoComponent
+    DrogaComponent
   ],
   imports: [
     BrowserModule,
