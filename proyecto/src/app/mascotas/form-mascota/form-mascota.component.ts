@@ -24,7 +24,7 @@ export class FormMascotaComponent {
     raza: '',
     edad: 0,
     enfermedad: '',
-    estado: true,
+    estado: 'Activo',
     imagen: ''
   }
 
@@ -34,8 +34,10 @@ export class FormMascotaComponent {
   ){}
 
   guardarMascota(form:any){
+
     this.sendMascota = Object.assign({}, this.formMascota);
-    this.mascotaService.save(this.sendMascota);
-    this.router.navigate(['/mascota/mascotas']);
+    console.log(this.sendMascota);
+    this.mascotaService.addMascota(this.sendMascota);
+    this.router.navigate(['/mascotas/all']);
 }
 }

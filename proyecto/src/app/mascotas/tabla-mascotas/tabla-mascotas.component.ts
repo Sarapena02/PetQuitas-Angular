@@ -22,7 +22,10 @@ export class TablaMascotasComponent {
 
   //cuando entra en el componenete carga todas las mascotas
   ngOnInit(): void {
-    this.mascotasList = this.mascotaService.findAll();
+    this.mascotaService.findAll().subscribe(
+      data =>
+        this.mascotasList = data
+    )
   }
 
   //metodos
@@ -35,10 +38,6 @@ export class TablaMascotasComponent {
   eliminarMascota(mascota: Mascota){
     var index = this.mascotasList.indexOf(mascota);
     this.mascotasList.splice(index, 1);
-  }
-
-  //agrega una mascota haciendo push a la lista
-  agregarMascota(mascota: Mascota){
-    this.mascotasList.push(mascota);
+    this.mascotaService.deleteById(mascota.id);
   }
 }
