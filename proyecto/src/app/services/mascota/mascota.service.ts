@@ -30,11 +30,11 @@ export class MascotaService {
   }
 
   addMascota(mascota:Mascota){
-    this.http.post('http://localhost:8090/mascotas/agregar',mascota).subscribe();
+    return this.http.post('http://localhost:8090/mascotas/agregar',mascota);
   }
 
   update(mascota:Mascota){
-    this.http.put('http://localhost:8090/mascotas/update/' + mascota.id, mascota ).subscribe();
+    return this.http.put('http://localhost:8090/mascotas/update/' + mascota.id, mascota );
   }
 
   findCliente(id:number):Observable<Cliente>{

@@ -29,10 +29,6 @@ export class TablaMascotasComponent {
   }
 
   //metodos
-  //edita una mascota
-  editarMascota(mascota: Mascota){
-    this.mascotaEditar = mascota;
-  }
 
   //busca el id de la mascota y la elimina
   eliminarMascota(mascota: Mascota){

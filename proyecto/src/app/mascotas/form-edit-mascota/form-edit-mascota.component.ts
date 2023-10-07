@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Mascota } from '../mascota';
 import { MascotaService } from 'src/app/services/mascota/mascota.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { mergeMap } from 'rxjs';
+import { mergeMap, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form-edit-mascota',
@@ -24,6 +24,7 @@ export class FormEditMascotaComponent {
   ){}
 
   ngOnInit(): void {
+    //busca la mascota a editar junto con el cliente asociado a esta
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get('id')); 
       this.mascotaService.findById(id).pipe(
@@ -41,8 +42,12 @@ export class FormEditMascotaComponent {
   }
 
   editarMascota(form:any){
-    this.mascotaService.update(this.mascota);
-    this.router.navigate(['/mascotas/all']);
+    //Primero realiza el update y una vez que el update se haya realizo entonces redirecciona a la tabla de mascotas
+    this.mascotaService.update(this.mascota).pipe(
+      switchMap(() => {
+        return this.router.navigate(['/mascotas/all']);
+      })
+    ).subscribe();
 }
 
 }
