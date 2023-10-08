@@ -9,7 +9,7 @@ import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
-  { path: 'mascota/mascotas', component: TablaMascotasComponent },
+  { path: 'mascotas/all', component: TablaMascotasComponent },
   { path: 'mascota/add', component: FormMascotaComponent },
   { path: 'mascota/edit/:id', component: FormEditMascotaComponent },
   { path: 'home', component: LandingComponent },

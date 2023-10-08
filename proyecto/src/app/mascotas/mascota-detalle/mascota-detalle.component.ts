@@ -23,7 +23,11 @@ export class MascotaDetalleComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get('id')); 
-      this.mascota = this.mascotaService.findById(id);
+      this.mascotaService.findById(id).subscribe(
+        (data) => {
+          this.mascota = data
+        }
+      )
     })
   }
 
