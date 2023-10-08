@@ -1,0 +1,86 @@
+/* Cambie el color del header y la fuente*/
+header {
+    background-color: #e5dde6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 0; /* Empuja el logo hacia la izquierda */
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px; /* Ajusta el espacio entre la imagen y el título */
+}
+
+.logo h1 {
+    font-size: 24px; /* Ajusta el tamaño del título */
+    color: #333;
+    margin: 0; /* Elimina el margen superior e inferior del título */
+}
+
+
+
+
+/* Estilos para el footer */
+.footer {
+    background-color: #8f7193;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-logo a {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+/* Estilos para los íconos de redes sociales */
+.footer-social {
+    margin-top: 20px;
+    color:black
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #53285a;
+}
+
+
