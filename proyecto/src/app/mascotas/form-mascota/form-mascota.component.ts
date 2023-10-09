@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, } from '@angular/core';
 import { Mascota } from '../mascota';
 import { Router } from '@angular/router';
 import { MascotaService } from 'src/app/services/mascota/mascota.service';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form-mascota',
@@ -24,7 +25,7 @@ export class FormMascotaComponent {
     raza: '',
     edad: 0,
     enfermedad: '',
-    estado: true,
+    estado: 'Activo',
     imagen: ''
   }
 
@@ -34,8 +35,12 @@ export class FormMascotaComponent {
   ){}
 
   guardarMascota(form:any){
+    //primero asigna la mascota al objeto sendMascota, despues realiza el addMascota y redirecciona a la tabla de mascotas
     this.sendMascota = Object.assign({}, this.formMascota);
-    this.mascotaService.save(this.sendMascota);
-    this.router.navigate(['/mascota/mascotas']);
+    this.mascotaService.addMascota(this.sendMascota).pipe(
+      switchMap(() => {
+        return this.router.navigate(['/mascotas/all']);
+      })
+    ).subscribe();
 }
 }

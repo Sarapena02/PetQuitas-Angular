@@ -14,6 +14,7 @@ import { ErrorPageComponent } from './error/error-page/error-page.component';
 import { FormMascotaComponent } from './mascotas/form-mascota/form-mascota.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit-mascota.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
