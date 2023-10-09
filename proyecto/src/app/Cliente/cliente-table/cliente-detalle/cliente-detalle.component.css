@@ -1,0 +1,57 @@
+/* Estilos para el contenedor principal */
+.mostrarCliente {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+/* Estilos para la información del cliente */
+.info {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.client-details {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.detail {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+/* Estilos para la imagen de la mascota */
+.pet-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los detalles de la mascota */
+.pet-details {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.nombreMascota {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para las etiquetas y valores */
+.label {
+    font-weight: bold;
+}
+
+.value {
+    margin-left: 10px;
+}
