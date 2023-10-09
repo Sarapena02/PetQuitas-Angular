@@ -6,6 +6,8 @@ import { ErrorPageComponent } from './error/error-page/error-page.component';
 import { TablaMascotasComponent } from './mascotas/tabla-mascotas/tabla-mascotas.component';
 import { FormMascotaComponent } from './mascotas/form-mascota/form-mascota.component';
 import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit-mascota.component';
+import { LogInClienteComponent } from './Cliente/log-in-cliente/log-in-cliente.component';
+import { LogInVeterinarioComponent } from './Veterinario/log-in-veterinario/log-in-veterinario.component';
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'home', component: LandingComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', component: ErrorPageComponent },
+  { path: 'logInCliente', component: LogInClienteComponent },
+  { path: 'logInVet', component: LogInVeterinarioComponent }
 ];
 
 @NgModule({

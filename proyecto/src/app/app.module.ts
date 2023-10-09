@@ -15,6 +15,8 @@ import { FormMascotaComponent } from './mascotas/form-mascota/form-mascota.compo
 import { FormsModule, NgForm } from '@angular/forms';
 import { FormEditMascotaComponent } from './mascotas/form-edit-mascota/form-edit-mascota.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogInVeterinarioComponent } from './Veterinario/log-in-veterinario/log-in-veterinario.component';
+import { LogInClienteComponent } from './Cliente/log-in-cliente/log-in-cliente.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     LandingComponent,
     ErrorPageComponent,
     FormMascotaComponent,
-    FormEditMascotaComponent
+    FormEditMascotaComponent,
+    LogInVeterinarioComponent,
+    LogInClienteComponent
   ],
   imports: [
     BrowserModule,

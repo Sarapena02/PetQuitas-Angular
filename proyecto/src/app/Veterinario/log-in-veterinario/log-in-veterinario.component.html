@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="login-container">
+        <form id="login-form" class="login-form" th:action="@{/veterinarios/login}" method="post">
+            <h2>Iniciar Sesión</h2>
+            <label for="cedula">Cedula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+            <button type="submit" class="login-button">Ingresar</button>
+        </form>
+    </div>
+</div>
