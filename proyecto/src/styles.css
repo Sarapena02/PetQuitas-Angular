@@ -114,7 +114,8 @@ nav ul li a {
  
  /* Estilos para los botones dentro del dropdown */
  .dropdown-content a[href^="/logInVet"],
- .dropdown-content a[href^="/logInCliente"] {
+ .dropdown-content a[href^="/logInCliente"],
+ .dropdown-content a[href^="/logInAdmin"]{
      background-color: #8f7193;
      color: white;
      transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
@@ -123,7 +124,8 @@ nav ul li a {
  
  /* Cambio de color al pasar el cursor por encima del botón */
  .dropdown-content a[href^="/logInVet"]:hover,
- .dropdown-content a[href^="/logInCliente"]:hover {
+ .dropdown-content a[href^="/logInCliente"]:hover,
+ .dropdown-content a[href^="/logInAdmin"]:hover{
      background-color: #53285a;
      transform: scale(1.05); /* Cambio de escala al pasar el cursor */
  }
@@ -131,4 +133,6 @@ nav ul li a {
  .dropdown:hover .dropdown-content {
      display: block;
  }
+
+
 

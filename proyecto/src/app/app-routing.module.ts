@@ -12,6 +12,8 @@ import { FormEditClienteComponent } from './Cliente/cliente-table/form-edit-clie
 import { ClienteTablaComponent } from './Cliente/cliente-table/tabla-cliente/tabla-cliente.component';
 import { ClienteDetalleComponent } from './Cliente/cliente-table/cliente-detalle/cliente-detalle.component';
 import { ClienteFormComponent } from './Cliente/cliente-table/form-cliente/cliente-form.component';
+import { LogInAdminComponent } from './Admin/log-in-admin/log-in-admin.component';
+import { DashboardAdminComponent } from './Admin/dashboard-admin/dashboard-admin.component';
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },  
   { path: 'logInCliente', component: LogInClienteComponent },
   { path: 'logInVet', component: LogInVeterinarioComponent },
+  { path: 'logInAdmin', component: LogInAdminComponent },
+  { path: 'admin/dashboard', component: DashboardAdminComponent },
   { path: '**', component: ErrorPageComponent }
 
 ];

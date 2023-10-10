@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Veterinario } from '../veterinario';
 import { Router } from '@angular/router';
 import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.service';
@@ -10,6 +10,9 @@ import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.ser
 })
 
 export class LogInVeterinarioComponent {
+
+  @Output()
+  addVeterianriologinEvent = new EventEmitter<String>();
 
   cedulaLog! : string;
   contraseniaLog!: string;
@@ -26,6 +29,7 @@ export class LogInVeterinarioComponent {
   
           if (data !== null) {
             // Realiza la redirección a la página deseada
+            this.addVeterianriologinEvent.emit('veterinario');
             this.router.navigate(['/mascotas/all']);
           } else {
             console.log('La respuesta fue nula o indefinida');
