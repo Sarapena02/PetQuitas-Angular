@@ -1,0 +1,25 @@
+<form class="small-form" #clienteForm="ngForm" (ngSubmit)="guardarCliente(clienteForm)">
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required [(ngModel)]="formCliente.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" class="form-control" id="celular" name="celular" required [(ngModel)]="formCliente.celular">
+    </div>
+
+    <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="text" class="form-control" id="correo" name="correo" required [(ngModel)]="formCliente.correo">
+    </div>
+
+    <div class="form-group">
+        <label for="cedula">Cedula</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" required [(ngModel)]="formCliente.cedula">
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!clienteForm.form.valid">Agregar</button> 
+
+</form>    
