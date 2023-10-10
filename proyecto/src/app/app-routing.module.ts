@@ -15,10 +15,11 @@ const routes: Routes = [
   { path: 'mascota/add', component: FormMascotaComponent },
   { path: 'mascota/edit/:id', component: FormEditMascotaComponent },
   { path: 'home', component: LandingComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: '**', component: ErrorPageComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },  
   { path: 'logInCliente', component: LogInClienteComponent },
-  { path: 'logInVet', component: LogInVeterinarioComponent }
+  { path: 'logInVet', component: LogInVeterinarioComponent },
+  { path: '**', component: ErrorPageComponent }
+
 ];
 
 @NgModule({
