@@ -1,4 +1,4 @@
-import { Cliente } from "../Cliente/cliente-table/cliente";
+import { Cliente } from "../Cliente/cliente";
 import { Tratamiento } from "../Tratamiento/tratamiento-table/tratamiento";
 
 export interface Mascota {

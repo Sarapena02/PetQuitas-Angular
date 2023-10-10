@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Cliente } from '../cliente';
+import { Cliente } from 'src/app/Cliente/cliente';
 import { ActivatedRoute, Router } from '@angular/router';
 import { mergeMap, switchMap } from 'rxjs';
-import { ClienteService } from 'src/app/clienteService/cliente.service';
+import { ClienteService } from 'src/app/services/Cliente/cliente.service';
+
 
 @Component({
     selector: 'app-form-edit-cliente',

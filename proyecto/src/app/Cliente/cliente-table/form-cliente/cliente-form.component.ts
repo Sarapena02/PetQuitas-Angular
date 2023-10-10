@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Cliente } from './cliente';
+import { Cliente } from 'src/app/Cliente/cliente';
 import { Router } from '@angular/router';
 import { switchMap } from 'rxjs';
-import { ClienteService } from 'src/app/clienteService/cliente.service';
+import { ClienteService } from 'src/app/services/Cliente/cliente.service';
 
 @Component({
   selector: 'app-cliente-table',
