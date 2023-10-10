@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Mascota } from '../../mascotas/mascota';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Cliente } from 'src/app/Cliente/cliente-table/cliente';
+import { Cliente } from 'src/app/Cliente/cliente';
 
 @Injectable({
   providedIn: 'root'

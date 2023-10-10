@@ -48,6 +48,6 @@ export class FormEditMascotaComponent {
         return this.router.navigate(['/mascotas/all']);
       })
     ).subscribe();
-}
+  }
 
 }
