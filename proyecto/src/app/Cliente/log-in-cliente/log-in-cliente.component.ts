@@ -24,12 +24,12 @@ export class LogInClienteComponent {
     
   validarCedula() {
     this.ClienteService.LogIn(this.cedulaLog).subscribe(
-      (data: Cliente) => {
+      (data: any) => {        
         if (data !== null) {
           //Obtiene el id del cliente
-          const clienteId = data.id;
+          this.clienteLog = data;
           // Realiza la redirección a la página deseada
-          const redirecTo = '/cliente/find/' + clienteId;
+          const redirecTo = '/cliente/find/' + this.clienteLog.id;
           this.addClienteloginEvent.emit('cliente');
           this.router.navigate([redirecTo]);
         } else {

@@ -25,12 +25,12 @@ export class LogInVeterinarioComponent {
     validarCedulayContrasenia() {
      
       this.VeterinarioService.LogIn(this.cedulaLog, this.contraseniaLog).subscribe(
-        (data) => {
-  
+        (data: any) => {
           if (data !== null) {
             // Realiza la redirección a la página deseada
+            this.veterinarioLog = data;
             this.addVeterianriologinEvent.emit('veterinario');
-            this.router.navigate(['/mascotas/all']);
+            this.router.navigate(['/veterinario/find/' + data.id]);
           } else {
             console.log('La respuesta fue nula o indefinida');
             alert("Cedula o contraseña incorrecta");

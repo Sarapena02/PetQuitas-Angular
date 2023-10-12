@@ -11,21 +11,8 @@ export class ClienteService {
   constructor(private http: HttpClient) 
   { }
 
-  LogIn(cedulaLog: string): Observable<Cliente> {
-    return this.http.post('http://localhost:8090/clientes/login', cedulaLog).pipe(
-      map((response: any) => {
-        // Create a new instance of Cliente and assign the properties from the response
-        const cliente: Cliente = {
-          id: response.id,
-          nombre: response.nombre,
-          celular: response.celular,
-          imagen: undefined,
-          correo: '',
-          cedula: ''
-        };
-        return cliente;
-      })
-    );
+  LogIn(cedulaLog: string){
+    return this.http.post('http://localhost:8090/clientes/login', cedulaLog)
   }
 
   findAll(): Observable<Cliente[]>{
