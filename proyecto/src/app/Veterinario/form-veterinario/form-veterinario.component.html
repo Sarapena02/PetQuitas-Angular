@@ -1,0 +1,31 @@
+<form class="small-form" #veterinarioForm="ngForm" (ngSubmit)="guardarVeterinario(veterinarioForm)">
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required [(ngModel)]="formVeterinario.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="raza">Cedula</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" required [(ngModel)]="formVeterinario.cedula">
+    </div>
+    
+    <div class="form-group">
+        <label for="edad">Contrasenia</label>
+        <input type="number" class="form-control" id="contrasenia" name="contrasenia" required [(ngModel)]="formVeterinario.contrasenia">
+    </div>
+
+    <div class="form-group">
+        <label for="enfermedad">Especialidad</label>
+        <input type="text" class="form-control" id="especialidad" name="especialidad" required [(ngModel)]="formVeterinario.especialidad">
+    </div>
+    
+    <div class="form-group">
+        <label for="imagen">Imagen</label>
+        <input type="text" class="form-control" id="imagen" name="imagen" required [(ngModel)]="formVeterinario.foto">
+        </div>
+    
+        <button class="btn btn-primary" type="submit" [disabled]="!veterinarioForm.form.valid">Agregar</button>
+</form>
+
+

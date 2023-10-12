@@ -11,12 +11,6 @@ import { switchMap } from 'rxjs';
 })
 export class FormMascotaComponent {
 
-  @Output()
-  addMascotaEvent = new EventEmitter<Mascota>();
-
-  @Output()
-  ocultarFormularioEvent = new EventEmitter<boolean>();
-
   sendMascota!: Mascota;
 
   formMascota: Mascota = {

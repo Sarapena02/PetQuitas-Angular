@@ -1,4 +1,7 @@
 /* Cambie el color del header y la fuente*/
+main { 
+    padding-bottom: 250px; 
+}
 header {
     background-color: #e5dde6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -32,7 +35,6 @@ header {
 .footer {
     background-color: #8f7193;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
 }
 
