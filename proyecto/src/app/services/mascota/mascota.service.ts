@@ -40,4 +40,12 @@ export class MascotaService {
   findCliente(id:number):Observable<Cliente>{
     return this.http.get<Cliente>(`http://localhost:8090/mascotas/cliente/` + id);
   }
+
+  findAllActivos(): Observable<number>{
+    return this.http.get<number>('http://localhost:8090/mascotas/cantidad/activos');
+  }
+
+  findAllInactivos(): Observable<number>{
+    return this.http.get<number>('http://localhost:8090/mascotas/cantidad/inactivos');
+  }
 }

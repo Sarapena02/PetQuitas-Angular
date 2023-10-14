@@ -19,6 +19,7 @@ export class FormVeterinarioComponent {
     cedula: '',
     contrasenia: '',
     especialidad: '',
+    estado: 'activo',
     foto: ''
   }
 
