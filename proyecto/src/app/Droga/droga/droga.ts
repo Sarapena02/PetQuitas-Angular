@@ -1,4 +1,10 @@
+import { Tratamiento } from "src/app/Tratamiento/tratamiento-table/tratamiento"
+
 export interface Droga{
     nombre:string
-    precio:number
+    precioVenta:number
+    precioCompra:number
+    unidadesDisponibles:number
+    unidadesVendidas:number
+    tratamientos?:Tratamiento[]
 }

@@ -45,7 +45,7 @@ export class FormEditClienteComponent {
         //Primero realiza el update y una vez que el update se haya realizo entonces redirecciona a la tabla de mascotas
         this.clienteService.update(this.cliente).pipe(
             switchMap(() => {
-                return this.router.navigate(['/cliente/all']);
+                return this.router.navigate(['/clientes/all']);
             })
         ).subscribe();
     }

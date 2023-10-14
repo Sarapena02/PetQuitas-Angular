@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Veterinario } from '../veterinario';
 import { Router } from '@angular/router';
 import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.service';
@@ -11,6 +11,9 @@ import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.ser
 
 export class LogInVeterinarioComponent {
 
+  @Output()
+  addVeterianriologinEvent = new EventEmitter<String>();
+
   cedulaLog! : string;
   contraseniaLog!: string;
   veterinarioLog!: Veterinario;
@@ -22,11 +25,12 @@ export class LogInVeterinarioComponent {
     validarCedulayContrasenia() {
      
       this.VeterinarioService.LogIn(this.cedulaLog, this.contraseniaLog).subscribe(
-        (data) => {
-  
+        (data: any) => {
           if (data !== null) {
             // Realiza la redirección a la página deseada
-            this.router.navigate(['/mascotas/all']);
+            this.veterinarioLog = data;
+            this.addVeterianriologinEvent.emit('veterinario');
+            this.router.navigate(['/veterinario/find/' + data.id]);
           } else {
             console.log('La respuesta fue nula o indefinida');
             alert("Cedula o contraseña incorrecta");
