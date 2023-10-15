@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Droga } from './droga';
+import { DrogaService } from 'src/app/services/Droga/droga.service';
+
 
 @Component({
   selector: 'app-droga',
@@ -7,4 +10,17 @@ import { Component } from '@angular/core';
 })
 export class DrogaComponent {
 
+  drogasList!: Droga[];
+
+  constructor(
+    private drogaService: DrogaService
+  ){}
+
+  ngOnInit(): void {
+    this.drogaService.findAll().subscribe(
+      data =>
+        this.drogasList = data
+    )
+  }
 }
+

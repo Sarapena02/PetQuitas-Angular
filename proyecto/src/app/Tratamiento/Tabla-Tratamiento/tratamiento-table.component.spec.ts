@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TratamientoTableComponent } from './tratamiento-table.component';
-
 describe('TratamientoTableComponent', () => {
   let component: TratamientoTableComponent;
   let fixture: ComponentFixture<TratamientoTableComponent>;

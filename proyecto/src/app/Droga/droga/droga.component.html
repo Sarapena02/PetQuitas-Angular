@@ -1,1 +1,24 @@
-<p>medicamento works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Unidades Disponibles</th>
+        <th>Unidades Vendidas</th>
+        <th>Precio Compra</th>
+        <th>Precio Venta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medicamento of drogasList">
+        <td>{{ medicamento.id }}</td>
+        <td>{{ medicamento.nombre }}</td>
+        <td>{{ medicamento.unidadesVendidas }}</td>
+        <td>{{ medicamento.unidadesDisponibles }}</td>
+        <td>{{ medicamento.precioCompra }}</td>
+        <td>{{ medicamento.precioVenta }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
