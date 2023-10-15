@@ -3,7 +3,7 @@ h1 {
     text-align: center;
     color: #333333;
     padding: 25px 0;
-    background-color: #8F7193;
+    background-color: #dfcae1;
     margin: 0;
     letter-spacing: 1.5px;
     border-top-left-radius: 15px;
@@ -86,6 +86,12 @@ h1 {
 
 .bottom-section ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-section li{
+    display: inline-block;
 }
 
 /* Estilos para los elementos de la sección inferior */
@@ -126,7 +132,7 @@ h1 {
     color: #c0a0c3;
 }
 
-/* Estilos para los valores de detalles */
+/* Estilos para los valores de detalles */  
 .value {
     flex-grow: 1;
     border-bottom: 1px solid #c0a0c3;

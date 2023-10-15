@@ -3,6 +3,8 @@ import { Veterinario } from '../veterinario';
 import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.service';
 import { Router } from '@angular/router';
 import { switchMap } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { validUrlValidator } from 'src/app/Ts/valid-url.validator';
 
 @Component({
   selector: 'app-form-veterinario',
@@ -13,27 +15,32 @@ export class FormVeterinarioComponent {
 
   sendVeterinario!: Veterinario;
 
-  formVeterinario: Veterinario = {
-    id: 0,
-    nombre: '',
-    cedula: '',
-    contrasenia: '',
-    especialidad: '',
-    foto: ''
-  }
+  formVeterinario!: FormGroup 
 
   constructor(
     private veterinarioService: VeterinarioService,
-    private router: Router
-  ){}
+    private router: Router,
+    private formBuilder: FormBuilder
+  ){
+    this.formVeterinario = this.formBuilder.group({
+      nombre: ['', Validators.required],
+      cedula: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      especialidad: ['', [Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ ]*$')]],
+      contrasenia: ['', Validators.required],
+      foto: ['', [validUrlValidator()]],
+      estado: 'Activo'
+    });
+  }
 
-  guardarVeterinario(form:any){
+  guardarVeterinario(){
     //primero asigna la mascota al objeto sendMascota, despues realiza el addMascota y redirecciona a la tabla de mascotas
-    this.sendVeterinario = Object.assign({}, this.formVeterinario);
-    this.veterinarioService.addMascota(this.sendVeterinario).pipe(
-      switchMap(() => {
-        return this.router.navigate(['/veterinarios/all']);
-      })
-    ).subscribe();
+    if(this.formVeterinario.valid){
+      this.sendVeterinario = this.formVeterinario.value as Veterinario;
+      this.veterinarioService.addMascota(this.sendVeterinario).pipe(
+        switchMap(() => {
+          return this.router.navigate(['/veterinarios/all']);
+        })
+      ).subscribe();
+    }
 }
 }

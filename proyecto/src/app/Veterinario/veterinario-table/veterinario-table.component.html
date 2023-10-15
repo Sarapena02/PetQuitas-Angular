@@ -10,8 +10,8 @@
             <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Cedula</th>
-                <th scope="col">Contraseña</th>
                 <th scope="col">Especialidad</th>
+                <th scope="col">estado</th>
                 <th scope="col">Opciones</th>
             </tr>
           </thead>
@@ -19,8 +19,8 @@
             <tr *ngFor="let veterinario of veterinariosList">
                 <td>{{veterinario.nombre}}</td>
                 <td>{{veterinario.cedula}}</td>
-                <td>{{veterinario.contrasenia}}</td>
                 <td>{{veterinario.especialidad}}</td>
+                <td>{{veterinario.estado}}</td>
                 <td>
                   <a [routerLink]="['/veterinario/find', veterinario.id]">
                     <button class="btn btn-primary">
