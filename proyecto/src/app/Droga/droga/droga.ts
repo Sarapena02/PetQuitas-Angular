@@ -1,4 +1,4 @@
-import { Tratamiento } from "src/app/Tratamiento/tratamiento-table/tratamiento"
+import { Tratamiento } from "src/app/Tratamiento/tratamiento"
 
 export interface Droga{
     id:number,

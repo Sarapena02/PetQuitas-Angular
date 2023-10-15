@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Tratamiento } from './Tratamiento/tratamiento/tratamiento';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veterinario-table.component';
@@ -42,9 +41,6 @@ import { Top3TratamientosComponent } from './Admin/InfoDashboard/top3-tratamient
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
 
 
@@ -69,7 +65,15 @@ import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratami
     DashboardAdminComponent,
     FormEditVeterinarioComponent,
     FormVeterinarioComponent,
-    VeterinarioDetalleComponent
+    VeterinarioDetalleComponent,
+    FormTratamientoComponent,
+    TramientosUltimoMesComponent,
+    CantidadTratamientosTipoComponent,
+    VeterinariosActivosComponent,
+    MascotasActivasComponent,
+    VentasTotalesComponent,
+    GananciasTotalesComponent,
+    Top3TratamientosComponent
   ],
   imports: [
     BrowserModule,

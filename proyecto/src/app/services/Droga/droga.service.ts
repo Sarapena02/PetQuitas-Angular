@@ -12,6 +12,13 @@ export class DrogaService {
     private http: HttpClient
   ) { }
 
+  findAll(): Observable<Droga[]>{
+    return this.http.get<Droga[]>("http://localhost:8090/drogas");
+  }
+
+  actualizarDroga(droga:Droga):Observable<Droga>{
+    return this.http.put<Droga>("http://localhost:8090/drogas",droga);
+  }
   top3Drogas(): Observable<Droga[]>{
     return this.http.get<Droga[]>("http://localhost:8090/drogas/top3");
   }

@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
-import { Tratamiento } from "../tratamiento";
 import { switchMap } from "rxjs";
 import { TratamientoService } from "src/app/services/Tratamiento/tratamiento.service";
 import { Router } from "@angular/router";
 import { Droga } from "src/app/Droga/droga/droga";
 import { Mascota } from "src/app/mascotas/mascota";
 import { Veterinario } from "src/app/Veterinario/veterinario";
+import { Tratamiento } from "../../tratamiento";
+import { DrogaService } from "src/app/services/Droga/droga.service";
 
 
 
@@ -24,19 +25,18 @@ export class FormTratamientoComponent {
      
      formTratamiento: Tratamiento = {
          id: 0,
-         nombre: '',
-         fecha: '',
-         medicamento: 0
+         fecha: ''
+
      }
-    drogaService: any;
 
      constructor(
          private tratamientoService: TratamientoService,
+         private drogaService: DrogaService,
          private router: Router
      ){}
 
      guardarTratamiento(form:any){
-        const drogaSeleccionada = this.drogaList.find(droga => droga.id === this.formTratamiento.medicamento);
+        const drogaSeleccionada = this.drogaList.find(droga => droga.id === this.formTratamiento.idDroga);
 
     if (drogaSeleccionada) {
       // Verificar si hay unidades disponibles
@@ -46,8 +46,15 @@ export class FormTratamientoComponent {
         drogaSeleccionada.unidadesVendidas += 1;
         // Actualizar la información en el backend
         this.drogaService.actualizarDroga(drogaSeleccionada).subscribe((_updatedDroga: any) => {
-          // Aquí puedes continuar con el proceso de guardar el tratamiento
-          // ...
+            this.tratamientoService.addTratamiento(this.formTratamiento).subscribe((nuevoTratamiento: any) => {
+                // El tratamiento se ha guardado correctamente
+                console.log("Tratamiento guardado con éxito:", nuevoTratamiento);
+        
+                // Redireccionar a la página de tratamientos (o a donde necesites)
+                this.router.navigate(['/tratamiento/all']);
+            }, error => {
+                console.error("Error al guardar el tratamiento:", error);
+            });
         });
       } else {
         alert('No hay unidades disponibles de esta droga.');
@@ -55,16 +62,5 @@ export class FormTratamientoComponent {
     } else {
       alert('Droga no encontrada.');
     }
-
-
-
-
-         //primero asigna la mascota al objeto sendMascota, despues realiza el addMascota y redirecciona a la tabla de mascotas
-         this.tratamientoList = Object.assign({}, this.formTratamiento);
-         this.tratamientoService.addTratamiento(this.tratamientoList).pipe(
-             switchMap(() => {
-                 return this.router.navigate(['/tratamiento/all']);
-             })
-         ).subscribe();
      }
 }
