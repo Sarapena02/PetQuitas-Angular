@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { Tratamiento } from './Tratamiento/tratamiento/tratamiento';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
 import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veterinario-table.component';
 import { DrogaComponent } from './Droga/droga/droga.component';
 import { TablaMascotasComponent } from './mascotas/tabla-mascotas/tabla-mascotas.component';
@@ -32,12 +31,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormEditVeterinarioComponent } from './Veterinario/form-edit-veterinario/form-edit-veterinario.component';
 import { FormVeterinarioComponent } from './Veterinario/form-veterinario/form-veterinario.component';
 import { VeterinarioDetalleComponent } from './Veterinario/veterinario-detalle/veterinario-detalle.component';
+import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteFormComponent,
-    TratamientoTableComponent,
     VeterinarioTableComponent,
     DrogaComponent,
     TablaMascotasComponent,
@@ -55,7 +55,8 @@ import { VeterinarioDetalleComponent } from './Veterinario/veterinario-detalle/v
     DashboardAdminComponent,
     FormEditVeterinarioComponent,
     FormVeterinarioComponent,
-    VeterinarioDetalleComponent
+    VeterinarioDetalleComponent,
+    FormTratamientoComponent
   ],
   imports: [
     BrowserModule,

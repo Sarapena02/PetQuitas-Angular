@@ -18,6 +18,7 @@ import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veter
 import { VeterinarioDetalleComponent } from './Veterinario/veterinario-detalle/veterinario-detalle.component';
 import { FormEditVeterinarioComponent } from './Veterinario/form-edit-veterinario/form-edit-veterinario.component';
 import { FormVeterinarioComponent } from './Veterinario/form-veterinario/form-veterinario.component';
+import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'veterinario/add', component: FormVeterinarioComponent },
   { path: 'veterinario/edit/:id', component: FormEditVeterinarioComponent },
   { path: 'veterinario/find/:id', component: VeterinarioDetalleComponent },
+  { path: 'tratamiento/add', component: FormTratamientoComponent },
   { path: '**', component: ErrorPageComponent }
 
 ];

@@ -1,4 +1,8 @@
 export interface Droga{
-    nombre:string
-    precio:number
+    id:number,
+    nombre:string,
+    unidadesDisponibles:number,
+    unidadesVendidas:number,
+    precioCompra:number,
+    precioVenta:number
 }

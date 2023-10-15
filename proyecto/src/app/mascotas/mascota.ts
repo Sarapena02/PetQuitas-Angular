@@ -1,5 +1,6 @@
 import { Cliente } from "../Cliente/cliente";
-import { Tratamiento } from "../Tratamiento/tratamiento-table/tratamiento";
+import { Tratamiento } from "../Tratamiento/tratamiento/tratamiento";
+
 
 export interface Mascota {
     id: number,

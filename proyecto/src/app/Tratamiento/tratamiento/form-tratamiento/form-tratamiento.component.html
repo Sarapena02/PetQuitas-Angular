@@ -1,0 +1,16 @@
+<form class="small-form" #tratamientoForm="ngForm" (ngSubmit)="guardarTratamiento(tratamientoForm)">
+        <label for="mascota">Mascota:</label>
+        <input type="text" id="mascota" [(ngModel)]="mascotaList" required>
+      
+        <label for="veterinario">Veterinario:</label>
+        <input type="text" id="veterinario" [(ngModel)]="veterinarioList" required>
+      
+        <label for="medicamento">Medicamento:</label>
+        <select name="medicamento" id="medicamento" [(ngModel)]="droga" required>
+          <option value="" disabled selected>Selecciona un medicamento</option>
+          <option *ngFor="let medicamento of drogaList" [value]="medicamento.id">{{ medicamento.nombre }}</option>
+        </select>
+      
+        <button type="submit">Guardar Tratamiento</button>
+</form>
+      
