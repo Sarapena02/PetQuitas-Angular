@@ -3,6 +3,8 @@ import { Veterinario } from '../veterinario';
 import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { mergeMap, switchMap } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { validUrlValidator } from 'src/app/Ts/valid-url.validator';
 
 @Component({
   selector: 'app-form-edit-veterinario',
@@ -16,11 +18,24 @@ export class FormEditVeterinarioComponent {
   @Input()
   veterinario!: Veterinario;
 
+  veterinarioForm!: FormGroup;
+
   constructor(
     private veterinarioService: VeterinarioService,
     private route: ActivatedRoute,
-    private router: Router
-  ){}
+    private router: Router,
+    private formBuilder: FormBuilder
+  ){
+    this.veterinarioForm = this.formBuilder.group({
+      id: [null, Validators.required],
+      nombre: [null, Validators.required],
+      cedula: [null, [Validators.required, Validators.pattern('^[0-9]*$')]],
+      especialidad: [null, [Validators.required, Validators.pattern('^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ ]*$')]],
+      contrasenia: [null, Validators.required],
+      foto: ['', [validUrlValidator()]],
+      estado: null
+    })
+  }
 
   ngOnInit(): void {
     //busca el veterinario a editar
@@ -29,6 +44,15 @@ export class FormEditVeterinarioComponent {
       this.veterinarioService.findById(id).subscribe(
         (data) => {
           this.veterinario = data
+          this.veterinarioForm.patchValue({
+            id: this.veterinario.id,
+            nombre: this.veterinario.nombre,
+            cedula: this.veterinario.cedula,
+            especialidad: this.veterinario.especialidad,
+            contrasenia: this.veterinario.contrasenia,
+            foto: this.veterinario.foto,
+            estado: this.veterinario.estado
+          })
         }
       )
     })
@@ -36,12 +60,12 @@ export class FormEditVeterinarioComponent {
 
   editarVeterinario(form:any){
     //Primero realiza el update y una vez que el update se haya realizo entonces redirecciona a la tabla de mascotas
-    this.veterinarioService.update(this.veterinario).pipe(
-      switchMap(() => {
-        return this.router.navigate(['/veterinarios/all']);
-      })
-    ).subscribe();
+    if(this.veterinarioForm.valid){
+      this.veterinarioService.update(this.veterinarioForm.value).pipe(
+        switchMap(() => {
+          return this.router.navigate(['/veterinarios/all']);
+        })
+      ).subscribe();
+    }
   }
-
-
 }
