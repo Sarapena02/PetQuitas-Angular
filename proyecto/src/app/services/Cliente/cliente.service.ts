@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Cliente } from 'src/app/Cliente/cliente';
+import { Mascota } from 'src/app/mascotas/mascota';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,10 @@ update(cliente:Cliente){
 
 findCliente(id:number):Observable<Cliente>{
     return this.http.get<Cliente>(`http://localhost:8090/clientes/cliente/` + id);
+}
+
+findMascotas(id:number):Observable<Mascota[]>{
+  return this.http.get<Mascota[]>(`http://localhost:8090/clientes/mascotas/` + id);
 }
   
 

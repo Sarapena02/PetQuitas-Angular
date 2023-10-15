@@ -29,7 +29,7 @@
 
 label {
     font-weight: bold;
-    color: bla;
+    color: black; /* Corregir el color */
     font-size: 20px;
     margin-bottom: 10px;
     display: block;
@@ -67,4 +67,10 @@ label {
 
 .btn-primary:hover {
     background-color: #9c879e;
+}
+
+.error-message {
+    color: red; /* Cambia el color del mensaje de error */
+    font-size: 14px; /* Ajusta el tamaño de la fuente del mensaje de error */
+    margin-top: 5px; /* Espacio superior para separar el mensaje de error del campo */
 }

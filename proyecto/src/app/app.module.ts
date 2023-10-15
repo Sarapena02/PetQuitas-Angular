@@ -42,6 +42,8 @@ import { GananciasTotalesComponent } from './Admin/InfoDashboard/ganancias-total
 import { Top3TratamientosComponent } from './Admin/InfoDashboard/top3-tratamientos/top3-tratamientos.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -90,8 +92,8 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     HighchartsChartModule,
     FlexLayoutModule,
-    MatTableModule
-
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
