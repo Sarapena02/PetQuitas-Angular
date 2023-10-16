@@ -43,6 +43,8 @@ import { Top3TratamientosComponent } from './Admin/InfoDashboard/top3-tratamient
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormEditTratamientoComponent } from './Tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
+import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tratamiento.component';
 
 
 
@@ -77,6 +79,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     VentasTotalesComponent,
     GananciasTotalesComponent,
     Top3TratamientosComponent,
+    FormEditTratamientoComponent,
+    FormTratamientoComponent,
   ],
   imports: [
     BrowserModule,
