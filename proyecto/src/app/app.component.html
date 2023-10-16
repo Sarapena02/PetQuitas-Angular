@@ -11,8 +11,8 @@
             <li class="dropdown">
                 <a class="button" href="#"><span>Log In &#9662;</span></a>
                 <div class="dropdown-content">
-                    <a [routerLink]="['/logInVet']">Ingresar como veterinario</a>
-                    <a [routerLink]="['/logInCliente']">Ingresar como cliente</a>
+                    <a href="/logInVet">Ingresar como veterinario</a>
+                    <a href="/logInCliente">Ingresar como cliente</a>
                 </div>
             </li>
         </ul>
@@ -21,10 +21,9 @@
 
     <main>
     <router-outlet></router-outlet>
-    
   </main>
 
-  <footer class="footer">
+  <footer class="footer navbar-fixed-bottom" >
     <div class="footer-content">
         <div class="footer-logo">
             <img src="favicon.ico" alt="Logo de la veterinaria">
@@ -42,5 +41,6 @@
         <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
     </div>
+</footer>
 
 

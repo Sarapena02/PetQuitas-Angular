@@ -1,8 +1,10 @@
 export interface Veterinario{
+    id: number
     nombre:string
     cedula:string
-    contraseña:string
+    contrasenia:string
     especialidad:string
     foto:string
+    estado:string
     
 }

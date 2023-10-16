@@ -6,7 +6,7 @@
 }
 
 /* Estilos generales */
-body {
+.body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
@@ -17,7 +17,18 @@ body {
     position: relative;
 }
 
-body::before {
+.body2 {
+    font-family: Arial, sans-serif;
+    background-color: #dfcae1;
+    color: #333;
+    background-position: center;
+    overflow: scroll;
+    position: relative;
+    background-size: cover;
+
+}
+
+.body::before {
     content: '';
     position: absolute;
     top: 0;
@@ -114,7 +125,8 @@ nav ul li a {
  
  /* Estilos para los botones dentro del dropdown */
  .dropdown-content a[href^="/logInVet"],
- .dropdown-content a[href^="/logInCliente"] {
+ .dropdown-content a[href^="/logInCliente"],
+ .dropdown-content a[href^="/logInAdmin"]{
      background-color: #8f7193;
      color: white;
      transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
@@ -123,7 +135,8 @@ nav ul li a {
  
  /* Cambio de color al pasar el cursor por encima del botón */
  .dropdown-content a[href^="/logInVet"]:hover,
- .dropdown-content a[href^="/logInCliente"]:hover {
+ .dropdown-content a[href^="/logInCliente"]:hover,
+ .dropdown-content a[href^="/logInAdmin"]:hover{
      background-color: #53285a;
      transform: scale(1.05); /* Cambio de escala al pasar el cursor */
  }
@@ -131,4 +144,6 @@ nav ul li a {
  .dropdown:hover .dropdown-content {
      display: block;
  }
+
+
 
