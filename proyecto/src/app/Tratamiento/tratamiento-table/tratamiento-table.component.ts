@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tratamiento-table.component.css']
 })
 export class TratamientoTableComponent {
+  
 
 }
