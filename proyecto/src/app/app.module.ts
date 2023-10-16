@@ -42,7 +42,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
-
+import { TratamientoAllComponent } from './Tratamiento/tratamiento/tratamiento-all/tratamiento-all.component';
+import { FormEditTratamientoComponent}   from './Tratamiento/tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,9 @@ import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratami
     MascotasActivasComponent,
     VentasTotalesComponent,
     GananciasTotalesComponent,
-    Top3TratamientosComponent
+    Top3TratamientosComponent,
+    FormEditTratamientoComponent,
+    TratamientoAllComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Droga } from './droga';
+import { DrogaService } from 'src/app/services/Droga/droga.service';
 
 @Component({
   selector: 'app-droga',
@@ -8,5 +9,16 @@ import { Droga } from './droga';
 })
 export class DrogaComponent {
 
+  drogaList!: Droga[];
 
+  constructor(
+    private drogaService: DrogaService,
+  ){}
+
+  ngOnInit(): void {
+    this.drogaService.findAll().subscribe(
+      data =>
+        this.drogaList = data
+    )
+  }
 }

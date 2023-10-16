@@ -21,7 +21,7 @@ export class FormTratamientoComponent {
      mascotaList!: Mascota;
      veterinarioList!: Veterinario;
      drogaList!: Droga[];
-     droga!: Droga[];
+     droga!: Droga;
      
      formTratamiento: Tratamiento = {
          id: 0,

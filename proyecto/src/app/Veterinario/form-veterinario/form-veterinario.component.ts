@@ -4,7 +4,8 @@ import { VeterinarioService } from 'src/app/services/Veterinario/veterinario.ser
 import { Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { validUrlValidator } from 'src/app/Ts/valid-url.validator';
+import { validUrlValidator } from 'Ts/valid-url.validators';
+
 
 @Component({
   selector: 'app-form-veterinario',
