@@ -29,58 +29,5 @@ header {
 
 
 
-/* Estilos para el footer */
-.footer {
-    background-color: #8f7193;
-    color: #fff;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-}
-
-.footer-logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.footer-logo a {
-    font-size: 24px;
-    color: #fff;
-    margin: 0;
-}
-
-.footer-info p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-/* Estilos para los íconos de redes sociales */
-.footer-social {
-    margin-top: 20px;
-    color:black
-}
-
-.social-icon {
-    font-size: 24px;
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #53285a;
-}
 
 
