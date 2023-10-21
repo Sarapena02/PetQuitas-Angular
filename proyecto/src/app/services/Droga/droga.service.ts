@@ -30,4 +30,12 @@ export class DrogaService {
   gananciasTotales(): Observable<number>{
     return this.http.get<number>("http://localhost:8090/drogas/GananciasTotales");
   }
+
+  findAll(): Observable<Droga[]>{
+    return this.http.get<Droga[]>("http://localhost:8090/drogas/all");
+  }
+
+  update(droga: Droga){
+    return this.http.put("http://localhost:8090/drogas/update/" + droga.id, droga );
+  }
 }
