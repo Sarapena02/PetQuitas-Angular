@@ -28,4 +28,12 @@ export class TratamientoService {
   findTratamientosXdrogaUltimoMes(): Observable<Tratamiento[]>{
     return this.http.get<any[]>('http://localhost:8090/tratamientos/TratamientosPorMedicamentoEnelUltimoMes');
   }
+
+  addTratamiento(tratamiento: Tratamiento){
+    return this.http.post('http://localhost:8090/tratamientos/agregar', tratamiento);
+  }
+
+  findAll(): Observable<Tratamiento[]>{
+    return this.http.get<Tratamiento[]>('http://localhost:8090/tratamientos/all');
+  }
 }

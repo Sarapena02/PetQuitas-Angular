@@ -28,6 +28,15 @@
                 <li><a class="button" href="/veterinarios/all"><span>Ver veterinarios</span></a></li>
                 <li><a class="button" href="/clientes/all"><span>Ver clientes</span></a></li>
                 <li><a class="button" href="/"><span>Cerrar sesion</span></a></li>
+                <li><a class="buttonA" href="/admin/dashboard"><span>Dashboard</span></a></li>
+                <li><a class="buttonA" href="/mascota/add"><span>Registrar mascota</span></a></li>
+                <li><a class="buttonA" href="/veterinario/add"><span>Registrar veterinario</span></a></li>
+                <li><a class="buttonA" href="/tratamiento/add"><span>Dar tratamiento</span></a></li>
+                <li><a class="buttonA" href="HACERLO"><span>Ver historial </span></a></li>
+                <li><a class="buttonA" href="/mascotas/all"><span>Ver mascotas</span></a></li>
+                <li><a class="buttonA" href="/veterinarios/all"><span>Ver veterinarios</span></a></li>
+                <li><a class="buttonA" href="/clientes/all"><span>Ver clientes</span></a></li>
+                <li><a class="buttonCA" href="/"><span>Cerrar sesion</span></a></li>
             </ng-container>
             <ng-container *ngSwitchCase="'veterinario'">
                 <li><a class="button" href="/mascota/add"><span>Registrar mascota</span></a></li>
@@ -35,12 +44,13 @@
                 <li><a class="button" href="HACERLO"><span>Ver historial </span></a></li>
                 <li><a class="button" href="/mascotas/all"><span>Ver mascotas</span></a></li>
                 <li><a class="button" href="/clientes/all"><span>Ver clientes</span></a></li>
-                <li><a class="button" href="/"><span>Cerrar sesion</span></a></li>
+                <li><a class="buttonC" href="/"><span>Cerrar sesion</span></a></li>
             </ng-container>
             <ng-container *ngSwitchCase="'cliente'">
                 <!--<li><a class="button" href=""><span>Ver historial </span></a></li> -->
                 <li><a class="button" href="HACERLO"><span>Ver mascotas</span></a></li>
                 <li><a class="button" href="/"><span>Cerrar sesion</span></a></li>
+                <li><a class="buttonC" href="/"><span>Cerrar sesion</span></a></li>
             </ng-container>
         </ul>
     </nav>
@@ -52,24 +62,6 @@
     
   </main>
 
-  <footer class="footer navbar-fixed-bottom" >
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="favicon.ico" alt="Logo de la veterinaria">
-            <h3>Veterinaria PetQuitas</h3>
-        </div>
-        <div class="footer-info">
-            <p>&copy; 2023 Veterinaria PetQuitas. Todos los derechos reservados.</p>
-            <p>Dirección: Calle de las Mascotas, 1234</p>
-            <p>Teléfono: +57-456-7890</p>
-            <p>Correo Electrónico: info@PetQuitas.com</p>
-        </div>
-    </div>
-    <div class="footer-social">
-        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-</footer>
+  
 
 

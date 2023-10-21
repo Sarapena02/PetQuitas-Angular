@@ -48,7 +48,6 @@ import { TratamientoDetalleComponent } from './Tratamiento/tratamiento/tratamien
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

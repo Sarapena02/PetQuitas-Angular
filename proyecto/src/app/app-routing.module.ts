@@ -22,6 +22,7 @@ import { TratamientoAllComponent } from './Tratamiento/tratamiento/tratamiento-a
 import { FormEditTratamientoComponent } from './Tratamiento/tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
 import { TratamientoDetalleComponent } from './Tratamiento/tratamiento/tratamiento-detalle/tratamiento-detalle.component';
 import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
+import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tratamiento.component';
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'tratamiento/all', component: TratamientoAllComponent },
   { path: 'tratamiento/edit/:id', component: FormEditTratamientoComponent },
   { path: 'tratamiento/find/:id', component: TratamientoDetalleComponent },
+  { path:  'tratamiento/add', component: FormTratamientoComponent},
   { path: '**', component: ErrorPageComponent }
 
 ];

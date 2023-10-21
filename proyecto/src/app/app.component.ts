@@ -26,7 +26,7 @@ export class AppComponent {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
        console.log('The URL changed to: ' + event['url'])
-       if(event['url']==='/' || event['url']==='/#servicios' || event['url']==='/#contacto'){
+       if(event['url']==='/' || event['url']==='/#servicios' || event['url']==='/#contacto' || event['url']==='/home' || event['url']==='/home#servicios' || event['url']==='/home#contacto'){
         this.document.body.classList.remove('body2');
         this.document.body.classList.add('body');
       }else{
