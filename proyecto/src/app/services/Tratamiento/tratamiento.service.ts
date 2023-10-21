@@ -29,6 +29,7 @@ export class TratamientoService {
     return this.http.get<any[]>('http://localhost:8090/tratamientos/TratamientosPorMedicamentoEnelUltimoMes');
   }
 
+<<<<<<<<< Temporary merge branch 1
   addTratamiento(tratamiento: Tratamiento){
     return this.http.post('http://localhost:8090/tratamientos/agregar', tratamiento);
   }
