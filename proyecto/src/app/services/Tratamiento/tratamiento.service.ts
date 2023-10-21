@@ -20,21 +20,20 @@ export class TratamientoService {
     return this.http.get<Tratamiento>('http://localhost:8090/tratamientos/find/' + id);
   }
 
+  addTratamiento(tratamiento: Tratamiento): Observable<Tratamiento>{
+    return this.http.post<Tratamiento>('http://localhost:8090/tratamientos/add', tratamiento);
+  }
+
+  deleteById(id: number): Observable<Tratamiento>{
+    return this.http.delete<Tratamiento>('http://localhost:8090/tratamientos/delete/' + id);
+  }
 
   findAllTratamientosUltimoMes(): Observable<number>{
     return this.http.get<number>('http://localhost:8090/tratamientos/ultimoMes');
   }
 
+
   findTratamientosXdrogaUltimoMes(): Observable<Tratamiento[]>{
     return this.http.get<any[]>('http://localhost:8090/tratamientos/TratamientosPorMedicamentoEnelUltimoMes');
-  }
-
-<<<<<<<<< Temporary merge branch 1
-  addTratamiento(tratamiento: Tratamiento){
-    return this.http.post('http://localhost:8090/tratamientos/agregar', tratamiento);
-  }
-
-  findAll(): Observable<Tratamiento[]>{
-    return this.http.get<Tratamiento[]>('http://localhost:8090/tratamientos/all');
   }
 }

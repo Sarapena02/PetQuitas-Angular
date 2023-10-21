@@ -46,7 +46,7 @@ import { FormEditTratamientoComponent } from './Tratamiento/tratamiento/form-edi
 import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
 import { TratamientoDetalleComponent } from './Tratamiento/tratamiento/tratamiento-detalle/tratamiento-detalle.component';
 import { TratamientoAllComponent } from './Tratamiento/tratamiento/tratamiento-all/tratamiento-all.component';
-import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
+import { TratamientoTableComponent } from './Tratamiento/tratamiento/tratamiento-table/tratamiento-table.component';
 
 
 

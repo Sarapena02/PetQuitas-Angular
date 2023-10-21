@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Tratamiento } from '../tratamiento';
+import { Tratamiento } from '../../tratamiento';
 import { TratamientoService } from 'src/app/services/Tratamiento/tratamiento.service';
 
 @Component({
