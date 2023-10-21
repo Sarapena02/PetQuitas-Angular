@@ -8,4 +8,5 @@ export interface Tratamiento{
     veterinario?:Veterinario
     mascota?:Mascota
     droga?:Droga
+    idDroga?:number
 }

@@ -1,0 +1,26 @@
+<form class="small-form" [formGroup]="tratamientoForm" (ngSubmit)="editarTratamiento(tratamientoForm)">
+    
+    <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input type="text" class="form-control" id="fecha" name="fecha" required formControlName="fecha">
+    </div>
+
+    <div class="form-group">
+        <label for="idDroga">Medicamento:</label>
+        <select type="text" class="form-control" id="idDroga" name="idDroga" formControlName="idDroga">
+            <option value="" disabled selected>Selecciona un medicamento</option>
+            <option *ngFor="let droga of drogaList" [value]="droga.id">{{ droga.nombre }}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="mascota">ID de Mascota:</label>
+        <input type="text" class="form-control" id="mascota" name="mascota" required formControlName="mascota">
+    </div>
+
+    <div class="form-group">
+        <label for="veterinario">ID de Veterinario:</label>
+        <input type="text" class="form-control" id="veterinario" name="veterinario" required formControlName="veterinario">
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!tratamientoForm.valid">Guardar</button>

@@ -4,7 +4,8 @@ import { MascotaService } from 'src/app/services/mascota/mascota.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { mergeMap, switchMap } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { validUrlValidator } from 'src/app/Ts/valid-url.validator';
+import { validUrlValidator } from 'Ts/valid-url.validators';
+
 
 
 @Component({
