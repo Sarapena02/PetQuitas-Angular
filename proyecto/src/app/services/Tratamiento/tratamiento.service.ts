@@ -12,6 +12,14 @@ export class TratamientoService {
     private http: HttpClient
   ) { }
 
+  findAll(): Observable<Tratamiento[]>{
+    return this.http.get<any[]>('http://localhost:8090/tratamientos/all');
+  }
+
+  findById(id: number): Observable<Tratamiento>{
+    return this.http.get<Tratamiento>('http://localhost:8090/tratamientos/find/' + id);
+  }
+
 
   findAllTratamientosUltimoMes(): Observable<number>{
     return this.http.get<number>('http://localhost:8090/tratamientos/ultimoMes');

@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
 import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veterinario-table.component';
 import { DrogaComponent } from './Droga/droga/droga.component';
 import { TablaMascotasComponent } from './mascotas/tabla-mascotas/tabla-mascotas.component';
@@ -43,9 +41,10 @@ import { Top3TratamientosComponent } from './Admin/InfoDashboard/top3-tratamient
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormEditTratamientoComponent } from './Tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
-import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tratamiento.component';
-
+import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
+import { TratamientoAllComponent } from './Tratamiento/tratamiento/tratamiento-all/tratamiento-all.component';
+import { FormEditTratamientoComponent}   from './Tratamiento/tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
+import { TratamientoDetalleComponent } from './Tratamiento/tratamiento/tratamiento-detalle/tratamiento-detalle.component';
 
 
 
@@ -53,7 +52,6 @@ import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tr
   declarations: [
     AppComponent,
     ClienteFormComponent,
-    TratamientoTableComponent,
     VeterinarioTableComponent,
     DrogaComponent,
     TablaMascotasComponent,
@@ -72,6 +70,7 @@ import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tr
     FormEditVeterinarioComponent,
     FormVeterinarioComponent,
     VeterinarioDetalleComponent,
+    FormTratamientoComponent,
     TramientosUltimoMesComponent,
     CantidadTratamientosTipoComponent,
     VeterinariosActivosComponent,
@@ -80,7 +79,8 @@ import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tr
     GananciasTotalesComponent,
     Top3TratamientosComponent,
     FormEditTratamientoComponent,
-    FormTratamientoComponent,
+    TratamientoAllComponent,
+    TratamientoDetalleComponent
   ],
   imports: [
     BrowserModule,
