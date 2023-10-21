@@ -21,6 +21,13 @@ export class TratamientoService {
     return this.http.get<any[]>('http://localhost:8090/tratamientos/TratamientosPorMedicamentoEnelUltimoMes');
   }
 
+  findById(id: number): Observable<Tratamiento>{
+    return this.http.get<Tratamiento>(`http://localhost:8090/tratamientos/find/` + id);
+  }
+
+  deleteById(id: number){
+    return this.http.delete(`http://localhost:8090/tratamientos/delete/` + id);
+  }
   addTratamiento(tratamiento: Tratamiento){
     return this.http.post('http://localhost:8090/tratamientos/agregar', tratamiento);
   }

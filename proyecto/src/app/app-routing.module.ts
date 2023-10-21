@@ -18,7 +18,11 @@ import { VeterinarioTableComponent } from './Veterinario/veterinario-table/veter
 import { VeterinarioDetalleComponent } from './Veterinario/veterinario-detalle/veterinario-detalle.component';
 import { FormEditVeterinarioComponent } from './Veterinario/form-edit-veterinario/form-edit-veterinario.component';
 import { FormVeterinarioComponent } from './Veterinario/form-veterinario/form-veterinario.component';
-import { FormTratamientoComponent } from './Tratamiento/form-tratamiento/form-tratamiento.component';
+import { FormTratamientoComponent } from './Tratamiento/tratamiento/form-tratamiento/form-tratamiento.component';
+import { TratamientoDetalleComponent } from './Tratamiento/tratamiento/tratamiento-detalle/tratamiento-detalle.component';
+import { FormEditTratamientoComponent } from './Tratamiento/tratamiento/form-edit-tratamiento/form-edit-tratamiento.component';
+import { TratamientoAllComponent } from './Tratamiento/tratamiento/tratamiento-all/tratamiento-all.component';
+import { TratamientoTableComponent } from './Tratamiento/tratamiento-table/tratamiento-table.component';
 
 const routes: Routes = [
   { path: 'mascota/find/:id', component: MascotaDetalleComponent },
@@ -40,6 +44,10 @@ const routes: Routes = [
   { path: 'veterinario/edit/:id', component: FormEditVeterinarioComponent },
   { path: 'veterinario/find/:id', component: VeterinarioDetalleComponent },
   {path:  'tratamiento/add', component: FormTratamientoComponent},
+  {path:  'tratamiento/edit/:id', component: FormEditTratamientoComponent},
+  {path:  'tratamiento/all', component: TratamientoAllComponent},
+  {path:  'tratamiento/find/:id', component: TratamientoDetalleComponent},
+  {path: 'tratamiento/table', component: TratamientoTableComponent},
   { path: '**', component: ErrorPageComponent }
 
 ];
