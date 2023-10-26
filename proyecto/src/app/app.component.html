@@ -12,22 +12,13 @@
                 <li class="dropdown">
                     <a class="button"><span>Log In &#9662;</span></a>
                     <div class="dropdown-content">
-                        <a [routerLink]="['/logInVet']">Ingresar como veterinario</a>
-                        <a [routerLink]="['/logInCliente']">Ingresar como cliente</a>
-                        <a [routerLink]="['/logInAdmin']">Ingresar como administrador</a>
+                        <a id="botonVet" [routerLink]="['/logInVet']">Ingresar como veterinario</a>
+                        <a id="botonCliente" [routerLink]="['/logInCliente']">Ingresar como cliente</a>
+                        <a id="botonAdmin" [routerLink]="['/logInAdmin']">Ingresar como administrador</a>
                     </div>
                 </li>
             </ng-container>
             <ng-container *ngSwitchCase="'admin'">
-                <li><a class="button" href="/admin/dashboard"><span>Dashboard</span></a></li>
-                <li><a class="button" href="/mascota/add"><span>Registrar mascota</span></a></li>
-                <li><a class="button" href="/veterinario/add"><span>Registrar veterinario</span></a></li>
-                <li><a class="button" href="/tratamiento/add"><span>Dar tratamiento</span></a></li>
-                <li><a class="button" href="HACERLO"><span>Ver historial </span></a></li>
-                <li><a class="button" href="/mascotas/all"><span>Ver mascotas</span></a></li>
-                <li><a class="button" href="/veterinarios/all"><span>Ver veterinarios</span></a></li>
-                <li><a class="button" href="/clientes/all"><span>Ver clientes</span></a></li>
-                <li><a class="button" href="/"><span>Cerrar sesion</span></a></li>
                 <li><a class="buttonA" href="/admin/dashboard"><span>Dashboard</span></a></li>
                 <li><a class="buttonA" href="/mascota/add"><span>Registrar mascota</span></a></li>
                 <li><a class="buttonA" href="/veterinario/add"><span>Registrar veterinario</span></a></li>
